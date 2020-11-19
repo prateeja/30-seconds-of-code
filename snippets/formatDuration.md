@@ -3,7 +3,7 @@ title: formatDuration
 tags: date,math,string,intermediate
 ---
 
-Returns the human readable format of the given number of milliseconds.
+Returns the human-readable format of the given number of milliseconds.
 
 - Divide `ms` with the appropriate values to obtain the appropriate values for `day`, `hour`, `minute`, `second` and `millisecond`.
 - Use `Object.entries()` with `Array.prototype.filter()` to keep only non-zero values.
@@ -29,5 +29,6 @@ const formatDuration = ms => {
 
 ```js
 formatDuration(1001); // '1 second, 1 millisecond'
-formatDuration(34325055574); // '397 days, 6 hours, 44 minutes, 15 seconds, 574 milliseconds'
+formatDuration(34325055574);
+// '397 days, 6 hours, 44 minutes, 15 seconds, 574 milliseconds'
 ```

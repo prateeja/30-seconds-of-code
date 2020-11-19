@@ -1,6 +1,6 @@
 ---
 title: JSONToFile
-tags: node,json,intermediate
+tags: node,intermediate
 ---
 
 Writes a JSON object to a file.
@@ -9,10 +9,12 @@ Writes a JSON object to a file.
 
 ```js
 const fs = require('fs');
+
 const JSONToFile = (obj, filename) =>
   fs.writeFileSync(`${filename}.json`, JSON.stringify(obj, null, 2));
 ```
 
 ```js
-JSONToFile({ test: 'is passed' }, 'testJsonFile'); // writes the object to 'testJsonFile.json'
+JSONToFile({ test: 'is passed' }, 'testJsonFile');
+// writes the object to 'testJsonFile.json'
 ```

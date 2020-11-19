@@ -3,15 +3,13 @@ title: isWeekday
 tags: date,beginner
 ---
 
-Results in a boolean representation of a specific date.
+Checks if the given date is a weekday.
 
-- Pass the specific date object firstly.
-- Use `Date.getDay()` to check weekday by using a modulo operator and then returning a boolean.
+- Use `Date.prototype.getDay()` to check weekday by using a modulo operator (`%`).
+- Omit the argument, `d`, to use the current date as default.
 
 ```js
-const isWeekday = (t = new Date()) => {
-  return t.getDay() % 6 !== 0;
-};
+const isWeekday = (d = new Date()) => d.getDay() % 6 !== 0;
 ```
 
 ```js

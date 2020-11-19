@@ -1,6 +1,6 @@
 ---
 title: partition
-tags: array,object,function,intermediate
+tags: array,object,intermediate
 ---
 
 Groups the elements into two arrays, depending on the provided function's truthiness for each element.
@@ -20,6 +20,13 @@ const partition = (arr, fn) =>
 ```
 
 ```js
-const users = [{ user: 'barney', age: 36, active: false }, { user: 'fred', age: 40, active: true }];
-partition(users, o => o.active); // [[{ 'user': 'fred',    'age': 40, 'active': true }],[{ 'user': 'barney',  'age': 36, 'active': false }]]
+const users = [
+  { user: 'barney', age: 36, active: false },
+  { user: 'fred', age: 40, active: true },
+];
+partition(users, o => o.active);
+// [
+//   [{ user: 'fred', age: 40, active: true }],
+//   [{ user: 'barney', age: 36, active: false }]
+// ]
 ```

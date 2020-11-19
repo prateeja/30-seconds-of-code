@@ -1,6 +1,6 @@
 ---
 title: primes
-tags: math,array,intermediate
+tags: math,intermediate
 ---
 
 Generates primes up to a given number, using the Sieve of Eratosthenes.
@@ -19,5 +19,5 @@ const primes = num => {
 ```
 
 ```js
-primes(10); // [2,3,5,7]
+primes(10); // [2, 3, 5, 7]
 ```

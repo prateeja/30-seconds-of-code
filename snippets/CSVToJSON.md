@@ -1,6 +1,6 @@
 ---
 title: CSVToJSON
-tags: string,array,object,advanced
+tags: string,object,advanced
 ---
 
 Converts a comma-separated values (CSV) string to a 2D array of objects.
@@ -19,12 +19,17 @@ const CSVToJSON = (data, delimiter = ',') => {
     .split('\n')
     .map(v => {
       const values = v.split(delimiter);
-      return titles.reduce((obj, title, index) => ((obj[title] = values[index]), obj), {});
+      return titles.reduce(
+        (obj, title, index) => ((obj[title] = values[index]), obj),
+        {}
+      );
     });
 };
 ```
 
 ```js
-CSVToJSON('col1,col2\na,b\nc,d'); // [{'col1': 'a', 'col2': 'b'}, {'col1': 'c', 'col2': 'd'}];
-CSVToJSON('col1;col2\na;b\nc;d', ';'); // [{'col1': 'a', 'col2': 'b'}, {'col1': 'c', 'col2': 'd'}];
+CSVToJSON('col1,col2\na,b\nc,d');
+// [{'col1': 'a', 'col2': 'b'}, {'col1': 'c', 'col2': 'd'}];
+CSVToJSON('col1;col2\na;b\nc;d', ';');
+// [{'col1': 'a', 'col2': 'b'}, {'col1': 'c', 'col2': 'd'}];
 ```

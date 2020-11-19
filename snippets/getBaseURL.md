@@ -1,9 +1,9 @@
 ---
 title: getBaseURL
-tags: browser,string,url,beginner
+tags: string,browser,beginner
 ---
 
-Returns the current URL without any parameters.
+Gets the current URL without any parameters.
 
 - Use `String.prototype.indexOf()` to check if the given `url` has parameters, `String.prototype.slice()` to remove them if necessary.
 
@@ -13,5 +13,6 @@ const getBaseURL = url =>
 ```
 
 ```js
-getBaseURL('http://url.com/page?name=Adam&surname=Smith'); // 'http://url.com/page'
+getBaseURL('http://url.com/page?name=Adam&surname=Smith');
+// 'http://url.com/page'
 ```

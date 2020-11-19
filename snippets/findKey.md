@@ -1,15 +1,17 @@
 ---
 title: findKey
-tags: object,function,intermediate
+tags: object,intermediate
 ---
 
-Returns the first key that satisfies the provided testing function. Otherwise `undefined` is returned.
+Finds the first key that satisfies the provided testing function.
+Otherwise `undefined` is returned.
 
-- Use `Object.keys(obj)` to get all the properties of the object, `Array.prototype.find()` to test the provided function for each key-value pair.
+- Use `Object.keys(obj)` to get all the properties of the object, `Array.prototype.find()` to test each key-value pair using `fn`.
 - The callback receives three arguments - the value, the key and the object.
 
 ```js
-const findKey = (obj, fn) => Object.keys(obj).find(key => fn(obj[key], key, obj));
+const findKey = (obj, fn) => 
+  Object.keys(obj).find(key => fn(obj[key], key, obj));
 ```
 
 ```js
@@ -19,6 +21,6 @@ findKey(
     fred: { age: 40, active: false },
     pebbles: { age: 1, active: true }
   },
-  o => o['active']
+  x => x['active']
 ); // 'barney'
 ```

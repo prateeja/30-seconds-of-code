@@ -3,7 +3,7 @@ title: colorize
 tags: node,string,intermediate
 ---
 
-Add special characters to text to print in color in the console (combined with `console.log()`).
+Adds special characters to text to print in color in the console (combined with `console.log()`).
 
 - Use template literals and special characters to add the appropriate color code to the string output.
 - For background colors, add a special character that resets the background color at the end of the string.
@@ -32,5 +32,6 @@ const colorize = (...args) => ({
 ```js
 console.log(colorize('foo').red); // 'foo' (red letters)
 console.log(colorize('foo', 'bar').bgBlue); // 'foo bar' (blue background)
-console.log(colorize(colorize('foo').yellow, colorize('foo').green).bgWhite); // 'foo bar' (first word in yellow letters, second word in green letters, white background for both)
+console.log(colorize(colorize('foo').yellow, colorize('foo').green).bgWhite);
+// 'foo bar' (first word in yellow letters, second word in green letters, white background for both)
 ```
